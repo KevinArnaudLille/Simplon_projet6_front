@@ -4,7 +4,7 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
 import { ListeClientsComponent } from './components/liste-clients/liste-clients.component';
 
 const routes: Routes = [
-  { path: 'connexion', component: ConnexionComponent },
+  { path: '', component: ConnexionComponent },
   { path: 'listeClients', component: ListeClientsComponent }
 ];
 

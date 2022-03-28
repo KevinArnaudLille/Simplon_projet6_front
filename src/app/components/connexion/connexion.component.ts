@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConseillerService } from 'src/app/services/conseiller.service';
 
 @Component({
   selector: 'app-connexion',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private conseillerService: ConseillerService) { }
 
   ngOnInit(): void {
+    this.conseillerService.getAll().subscribe(val => console.log(val));
+
   }
 
 }
