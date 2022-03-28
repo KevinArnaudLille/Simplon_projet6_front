@@ -1,0 +1,23 @@
+.containerConnect {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    .imgConnect {
+        img {
+            height: 100vh;
+        }
+    }
+    .titreConnect {
+        color: aliceblue;
+        margin: 0 auto;
+        h2 {
+            text-align: center;
+        }
+        .btnConnect {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
