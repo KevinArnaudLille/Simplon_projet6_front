@@ -1,1 +1,28 @@
 <p>liste-clients works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>
+                nom 
+            </th>
+            <th>
+                prenom
+            </th>
+            <th>
+                identifiant
+            </th>
+            <th>
+                MDP
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let con of conseiller">
+            <th>{{con.id}}</th>
+            <td>{{con.nom}}</td>
+            <td>{{con.prenom}}</td>
+            <td>{{con.identifiant}}</td>
+            <td>{{con.MDP}}</td>
+        </tr>
+    </tbody>
+</table>
