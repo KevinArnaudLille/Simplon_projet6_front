@@ -17,12 +17,12 @@
         </tr>
     </thead>
     <tbody>
-        <!-- <tr *ngFor="let con of conseiller">
-            <th>{{con.id}}</th>
-            <td>{{con.nom}}</td>
-            <td>{{con.prenom}}</td>
-            <td>{{con.identifiant}}</td>
-            <td>{{con.MDP}}</td>
-        </tr> -->
+        <tr *ngFor="let conseiller of conseillers">
+            <th>{{conseiller.id}}</th>
+            <td>{{conseiller.nom}}</td>
+            <td>{{conseiller.prenom}}</td>
+            <td>{{conseiller.identifiant}}</td>
+            <td>{{conseiller.mot_de_passe}}</td>
+        </tr>
     </tbody>
 </table>
