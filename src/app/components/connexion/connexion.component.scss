@@ -1,6 +1,5 @@
 .containerConnect {
     display: flex;
-    justify-content: center;
     justify-content: space-between;
     align-items: center;
 
@@ -12,12 +11,33 @@
     .titreConnect {
         color: aliceblue;
         margin: 0 auto;
+        padding-bottom: 1rem;
+        //espace entre les input//width 100%/padding pour aggrandire les input
+        .form {
+            label {
+                input {
+                    margin-bottom: 2rem;
+                    width: 100%;
+                    padding: 0.7rem;
+                }
+            }
+        }
+        h1 {
+            font-family: "Libre Barcode 128 Text", cursive;
+            text-align: center;
+            font-size: 4rem;
+        }
         h2 {
             text-align: center;
         }
         .btnConnect {
             display: flex;
             justify-content: center;
+            button {
+                padding: 0.7rem 2rem 0.7rem 2rem;
+                border: none;
+            }
+
         }
     }
 }
