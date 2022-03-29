@@ -16,4 +16,7 @@ export class ConseillerService {
     getAll(): Observable<Conseiller[]> {
         return this.http.get<Conseiller[]>(`${this.baseUrl}`);
     }
+    loginConseiller(conseiller: Conseiller): Observable<object> {
+        return this.http.post(`${this.baseUrl}`, conseiller);
+    }
 }
