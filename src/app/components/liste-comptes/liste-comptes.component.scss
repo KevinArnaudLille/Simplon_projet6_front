@@ -1,10 +1,17 @@
-body{
-      background: linear-gradient(#dd9520, #80a06e);
-      
-
+.titre {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 30px;
+  justify-content: space-between; //pour mettre des espaces entre 2 elements
 }
 
-ul {
-  list-style-type: none;
+.client {
+  color: aliceblue;
+  font-size: 3rem;
+  align-items: center;
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
 }

@@ -6,18 +6,20 @@ import { AppComponent } from './app.component';
 import { ConnexionComponent } from './components/connexion/connexion.component';
 import { ListeComptesComponent } from './components/liste-comptes/liste-comptes.component';
 import { ListeClientsComponent } from './components/liste-clients/liste-clients.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms'; 
 @NgModule({
   declarations: [
     AppComponent,
     ConnexionComponent,
     ListeComptesComponent,
-    ListeClientsComponent
+    ListeClientsComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
