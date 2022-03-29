@@ -7,7 +7,8 @@ import { ListeComptesComponent } from './components/liste-comptes/liste-comptes.
 const routes: Routes = [
   { path: 'connexion', component: ConnexionComponent },
   { path: 'listeClients', component: ListeClientsComponent },
-  { path: 'listeComptes', component: ListeComptesComponent}
+  { path: 'listeComptes', component: ListeComptesComponent},
+  { path: '', component: ConnexionComponent }
 ];
 
 @NgModule({
