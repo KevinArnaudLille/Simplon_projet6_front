@@ -7,10 +7,10 @@
     <form (ngSubmit)="conseillerLogin()">
       <div class="form">
         <label for="identifiantConnexion">Identifiant</label>
-        <input type="text" [(ngModel)]="conseiller.identifiant" id="identifiant" name="identifiant"/>
+        <input type="text" [(ngModel)]="login" id="identifiant" name="identifiant"/>
 
         <label>Mot de passe</label>
-        <input type="password" [(ngModel)]="conseiller.mot_de_passe" id="mot_de_passe" name="mot_de_passe"/>
+        <input type="password" [(ngModel)]="mdp" id="mot_de_passe" name="mot_de_passe"/>
 
         <div class="btnConnect">
           <button type="submit">Se connecter</button>

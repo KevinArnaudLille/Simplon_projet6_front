@@ -21,8 +21,9 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column; // pour centrer des elements et les mettre en colonne
-
+        
         .table {
+                color: rgb(0, 0, 0);
                 font-size: 30px;
                 background-color: rgba(240, 248, 255, 0.712);
                 padding: 3rem;

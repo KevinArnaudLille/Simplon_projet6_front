@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Conseiller } from 'src/app/models/conseiller';
 import { ConseillerService } from 'src/app/services/conseiller.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-connexion',
@@ -9,18 +10,23 @@ import { ConseillerService } from 'src/app/services/conseiller.service';
 })
 export class ConnexionComponent implements OnInit {
 
-  conseiller:Conseiller = new Conseiller();
-  constructor(private conseillerService: ConseillerService) { }
+  login:string = "";
+  mdp:string = "";
+  
+
+  constructor(private conseillerService: ConseillerService,public router: Router) { }
 
   ngOnInit(): void {
-    //this.conseillerService.getAll().subscribe(val => console.log(val));
   }
+
   conseillerLogin() {
-    console.log(this.conseiller);
-    this.conseillerService.loginConseiller(this.conseiller).subscribe(data=>{
-      console.log(data);
-      
-      alert("Bienvenue")
-    },error=>alert("L'un des champs ne correspond pas"))
+    this.conseillerService.getConseillerByLoginAndPassword(this.login,this.mdp).subscribe(
+      data => {
+        console.log(data);
+        this.conseillerService.setConnectedConseiller(data)
+        this.router.navigate([`/listeClients/${this.conseillerService.getConnectedConseiller().id}`])
+      }
+      )
   }
+
 }

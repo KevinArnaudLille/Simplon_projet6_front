@@ -8,15 +8,25 @@ import { Conseiller } from '../models/conseiller';
 })
 export class ConseillerService {
 
-    private baseUrl = 'http://localhost:9000/api/conseiller';
+    private baseUrl = 'http://localhost:9000/api/conseiller?';
+
+    private connectedConseiller: Conseiller = new Conseiller;
 
     constructor(private http: HttpClient) {
         
     }
-    getAll(): Observable<Conseiller[]> {
-        return this.http.get<Conseiller[]>(`${this.baseUrl}`);
+
+    getConseillerByLoginAndPassword(login:string,mdp:string):Observable<Conseiller>{
+        return this.http.get<Conseiller>(`
+        ${this.baseUrl}login=${login}&mdp=${mdp}
+        `)
     }
-    loginConseiller(conseiller: Conseiller): Observable<object> {
-        return this.http.post(`${this.baseUrl}`, conseiller);
+
+    setConnectedConseiller(conseiller:Conseiller){
+        this.connectedConseiller = conseiller;
+    }
+
+    getConnectedConseiller():Conseiller{
+        return this.connectedConseiller;
     }
 }
